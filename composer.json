@@ -1,22 +1,27 @@
 {
     "name": "vendor/package",
     "description": "",
+    "homepage": "",
+    "license": "MIT",
     "authors": [
         {
             "name": "Scott Travis",
-            "email": "scott@swt83.com"
+            "email": "scott.w.travis@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": ""
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.0.*"
+        "illuminate/support": "4.1.*"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
-            "Vendor\\Package\\": "src/"
+            "Vendor\\": "src/"
         }
     },
     "minimum-stability": "dev"
