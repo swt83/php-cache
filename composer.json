@@ -20,6 +20,9 @@
         "illuminate/support": "4.1.*"
     },
     "autoload": {
+        "classmap": [
+            "src/commands"
+        ],
         "psr-0": {
             "Vendor\\": "src/"
         }
