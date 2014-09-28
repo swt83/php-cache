@@ -1,9 +1,11 @@
-<?php namespace Vendor\Package;
+<?php
+
+namespace Vendor\Package;
 
 use Illuminate\Support\ServiceProvider;
 
-class PackageServiceProvider extends ServiceProvider {
-
+class PackageServiceProvider extends ServiceProvider
+{
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -18,9 +20,14 @@ class PackageServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->package('vendor/package');
+        // set root
+        $src = __DIR__.'/../../../';
 
-        include __DIR__.'/../../routes.php';
+        // register package
+        $this->package('vendor/package', null, $src);
+
+        // include routes
+        include $src.'routes.php';
     }
 
     /**
@@ -42,5 +49,4 @@ class PackageServiceProvider extends ServiceProvider {
     {
         return array();
     }
-
 }
