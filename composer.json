@@ -1,7 +1,7 @@
 {
-    "name": "travis/stash",
-    "description": "A PHP library for caching data.",
-    "homepage": "https://github.com/swt83/php-stash",
+    "name": "travis/cache",
+    "description": "A PHP package for caching data.",
+    "homepage": "https://github.com/swt83/php-cache",
     "license": "MIT",
     "authors": [
         {
