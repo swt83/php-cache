@@ -21,7 +21,7 @@ class Cache {
 		$package = array(
 			'time' => time(),
 			'expires' => $minutes ? strtotime('+'.$minutes.' minutes') : false,
-			'payload' => is_object($value) && ($value instanceof \Closure) ? $value() : $value,
+			'payload' => is_object($value) and ($value instanceof \Closure) ? $value() : $value,
 		);
 
 		// encode
