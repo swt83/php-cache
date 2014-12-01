@@ -1,7 +1,7 @@
 {
-    "name": "vendor/package",
-    "description": "",
-    "homepage": "",
+    "name": "travis/stash",
+    "description": "A PHP library for caching data.",
+    "homepage": "https://github.com/swt83/php-stash",
     "license": "MIT",
     "authors": [
         {
@@ -12,19 +12,16 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": ""
+            "url": "git@github.com:swt83/php-ex.git"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.1.*"
+        "travis/ex": "*"
     },
     "autoload": {
-        "classmap": [
-            "src/commands"
-        ],
         "psr-0": {
-            "Vendor\\": "src/"
+            "Travis\\": "src/models/"
         }
     },
     "minimum-stability": "dev"
