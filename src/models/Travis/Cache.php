@@ -98,6 +98,11 @@ class Cache {
 		}
 	}
 
+	/**
+	 * Return a directory.
+	 *
+	 * @return	string
+	 */
 	protected static function dir()
 	{
 		return __DIR__.'/../../storage/';
