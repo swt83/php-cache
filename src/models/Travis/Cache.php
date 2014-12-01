@@ -20,8 +20,8 @@ class Cache {
 		// package
 		$package = array(
 			'time' => time(),
-			'expires' => strtotime('+'.$minutes.' minutes'),
-			'payload' => $value
+			'expires' => $minutes ? strtotime('+'.$minutes.' minutes') : false,
+			'payload' => is_object($value) && ($value instanceof \Closure) ? $value() : $value,
 		);
 
 		// encode
@@ -49,7 +49,7 @@ class Cache {
 		$package = json_decode($package);
 
 		// check expiry...
-		if (time() > $package->expires)
+		if ($package->expires and time() > $package->expires)
 		{
 			// return null
 			return null;

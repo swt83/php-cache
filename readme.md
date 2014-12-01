@@ -15,11 +15,24 @@ $data = array(
 	'foor' => 'bar'
 );
 
-Cache::set('test', 3, $data); // saves for 3 minutes
+// save for 3 minutes
+Cache::set('test', 3, $data);
 
-$data = Cache::get('test'); // returns array
+// save forever
+Cache::set('test', 0, $data);
 
-Cache::forget('test'); // deletes cache
+// pass a closure
+Cache::set('test', 3, function()
+{
+	return 'foobar';
+});
 
-Cache::clear(); // deletes all caches
+// get your data
+$data = Cache::get('test');
+
+// forget your data
+Cache::forget('test');
+
+// clear all caches
+Cache::clear();
 ```
